@@ -1,39 +1,24 @@
 const data = {
     "url": "your-url-here",
     "slug": "Story slug",
-    "headline": "This is the headline",
-    "title": "Buildout Template",
-    "pub_date": "{insert your date in metadata.json}",
+    "headline": "Senior Phi Kappa",
+    "title": "Senior Phi Kappa",
+    "pub_date": "Apr 12, 2022 1:46 pm · Updated Apr 12, 2022 1:46 pm",
     "bylines": {
         "By": {
-            "name": "Cate Charron",
-            "email": "catchar@iu.edu",
-            "twitter": "catcharron",
-            "pfp": "https://pbs.twimg.com/profile_images/1499562155896619014/CUD2EvuV_400x400.jpg",
-            "bio": "Cate has worked at the IDS since 2019 as a reporter and designer."
+            "name": "Evan Gerike",
+            "bio": "Evan has worked at the IDS since 2019 as a reporter and designer."
         },
         "Photos by": {
-            "name": "Izzy Myszak",
-            "email": "izzymyszak@iu.edu",
-            "twitter": "izzymyszak"
+            "name": "Ethan Levy | Indiana Daily Student",
+            
         },
-        "Design and development by": {
-            "name": "Carson TerBush",
-            "email": "cterbush@iu.edu",
-            "twitter": "carsonology",
-            "pfp": "https://pbs.twimg.com/profile_images/1477852735278129152/vk-AiTE6_400x400.jpg",
-            "bio": "Carson has worked at the IDS since 2019 as a reporter and designer."
-        },
-        "Graphics by": {
-            "name": "Vivek Rao",
-            "email": "vivrao@iu.edu",
-            "twitter": "vivrao"
-        }
+        
     }
 }
 
 // bylines
-const byline_types = ["By", "Photos by", "Design and development by", "Graphics by"]
+const byline_types = ["By", "Photos by"]
 let bylines_html = '';
 let bios_html = '';
 
@@ -90,7 +75,7 @@ document.querySelector('#bylines').innerHTML = bylines_html;
 document.querySelector('.author-bios').innerHTML = bios_html;
 
 // pubdate
-document.querySelector('#pubdate').innerHTML = "Published " + data.pub_date;
+document.querySelector('#pubdate').innerHTML = data.pub_date;
 
 // title & slug
 document.querySelector('title').innerHTML = data.title + ' | Indiana Daily Student';
